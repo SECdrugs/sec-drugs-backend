@@ -1,5 +1,5 @@
 use actix_web::{
-    get, http::header::ContentType, middleware::Logger, web, App, HttpResponse, HttpServer,
+    get, http::header::ContentType, middleware::Logger, web::Data, App, HttpResponse, HttpServer,
     Responder,
 };
 mod controllers;
@@ -16,7 +16,7 @@ async fn index() -> impl Responder {
 
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
-    std::env::set_var("RUST_LOG", "info");
+    std::env::set_var("RUST_LOG", "debug");
     std::env::set_var("RUST_BACKTRACE", "1");
     env_logger::init();
 
@@ -31,7 +31,7 @@ async fn main() -> std::io::Result<()> {
         let logger = Logger::default();
 
         App::new()
-            .app_data(pool.clone())
+            .app_data(Data::new(pool.clone()))
             .wrap(logger)
             .service(index)
             .service(create)
