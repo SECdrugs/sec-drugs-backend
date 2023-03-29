@@ -2,7 +2,10 @@ use actix_web::{
     get, http::header::ContentType, middleware::Logger, web, App, HttpResponse, HttpServer,
     Responder,
 };
-use sqlx::{postgres::PgPoolOptions, PgPool};
+mod controllers;
+mod models;
+use controllers::create::create;
+use sqlx::postgres::PgPoolOptions;
 
 #[get("/")]
 async fn index() -> impl Responder {
@@ -31,6 +34,7 @@ async fn main() -> std::io::Result<()> {
             .app_data(pool.clone())
             .wrap(logger)
             .service(index)
+            .service(create)
     })
     .bind(("127.0.0.1", 8000))?
     .run()
