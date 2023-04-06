@@ -3,8 +3,8 @@
     "names": ["AMG529"],
     "company": "Amgen",
     "genes": ["ASGR1"],
-    "clinical_annotation": ["NA"],
-    "pathway_annotation": ["NA"],
+    "clinical_annotation": [],
+    "pathway_annotation": [],
     "diseases": ["Cardiovascular Disease"],
     "targets": [
       {
@@ -18,9 +18,9 @@
     "phase": 1,
     "discontinuation_reason": "commercialization related",
     "link": "https://www.evaluate.com/vantage/articles/events/conferences/jp-morgan-2019-day-two-roundup-after-party-harsh-reality",
-    "repurposed_efforts": ["NA"],
-    "repurposed_drug_name": "NA",
-    "repurposed_indications": ["NA"],
+    "repurposed_efforts": [],
+    "repurposed_drug_name": null,
+    "repurposed_indications": [],
     "repurposed_year": null,
     "repurposed_company": null,
     "repurposed_phase": null
@@ -29,8 +29,8 @@
     "names": ["LY3463251"],
     "company": "Eli Lilly",
     "genes": ["GDF15"],
-    "clinical_annotation": ["NA"],
-    "pathway_annotation": ["NA"],
+    "clinical_annotation": [],
+    "pathway_annotation": [],
     "diseases": ["Type 2 Diabetes", "Obesity"],
     "targets": [
       {
@@ -42,11 +42,11 @@
     "indication_type": "Metabolic",
     "year_discontinued": 2020,
     "phase": 1,
-    "discontinuation_reason": "NA",
+    "discontinuation_reason": null,
     "link": "https://investor.lilly.com/static-files/e84b2d25-8e5b-4041-b7f0-8a1749fb9f77",
-    "repurposed_efforts": ["NA"],
-    "repurposed_drug_name": "NA",
-    "repurposed_indications": ["NA"],
+    "repurposed_efforts": [],
+    "repurposed_drug_name": null,
+    "repurposed_indications": [],
     "repurposed_year": null,
     "repurposed_company": null,
     "repurposed_phase": null
@@ -55,8 +55,8 @@
     "names": ["LY3325656"],
     "company": "Eli Lilly",
     "genes": ["GPR142"],
-    "clinical_annotation": ["NA"],
-    "pathway_annotation": ["NA"],
+    "clinical_annotation": [],
+    "pathway_annotation": [],
     "targets": [
       {
         "names": ["G protein-coupled receptor 142"]
@@ -67,11 +67,11 @@
     "indication_type": "Metabolic",
     "year_discontinued": 2018,
     "phase": 1,
-    "discontinuation_reason": "NA",
+    "discontinuation_reason": null,
     "link": "https://investor.lilly.com/static-files/3556875d-ae48-4911-99ba-05647b225ed5",
     "repurposed_efforts": ["Diabetic retinopathy", "Pain"],
-    "repurposed_drug_name": "NA",
-    "repurposed_indications": ["NA"],
+    "repurposed_drug_name": null,
+    "repurposed_indications": [],
     "repurposed_year": null,
     "repurposed_company": null,
     "repurposed_phase": null
@@ -81,7 +81,7 @@
     "company": "Eli Lilly",
     "genes": ["IAPP/CALCR"],
     "clinical_annotation": ["rocuronium dosage"],
-    "pathway_annotation": ["NA"],
+    "pathway_annotation": [],
     "targets": [
       {
         "names": ["amylin/calcitonin receptor"]
@@ -92,11 +92,11 @@
     "indication_type": "Metabolic",
     "year_discontinued": null,
     "phase": 1,
-    "discontinuation_reason": "NA",
+    "discontinuation_reason": null,
     "link": "https://investor.lilly.com/static-files/68230d7a-ba20-43dc-979b-fea529a5e6c4",
-    "repurposed_efforts": ["NA"],
-    "repurposed_drug_name": "NA",
-    "repurposed_indications": ["NA"],
+    "repurposed_efforts": [],
+    "repurposed_drug_name": null,
+    "repurposed_indications": [],
     "repurposed_year": null,
     "repurposed_company": null,
     "repurposed_phase": null

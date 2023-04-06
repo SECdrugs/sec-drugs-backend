@@ -1,22 +1,17 @@
 use serde::{Deserialize, Serialize};
 
-#[derive(Deserialize, Serialize)]
+#[derive(Clone, Deserialize, Serialize)]
 pub struct Target {
     pub names: Vec<String>,
 }
 
-#[derive(Deserialize, Serialize)]
+#[derive(Clone, Deserialize, Serialize)]
 pub struct Indication {
     pub indication: String,
     pub indication_type: String,
 }
 
-#[derive(Deserialize, Serialize)]
-pub struct Repurposing {
-    pub year: u16,
-}
-
-#[derive(Deserialize, Serialize)]
+#[derive(Clone, Deserialize, Serialize)]
 pub struct CreateModel {
     pub names: Vec<String>,
     pub company: String,
@@ -28,14 +23,14 @@ pub struct CreateModel {
     pub mechanism_of_action: Vec<String>,
     pub indications: Vec<String>,
     pub indication_type: String,
-    pub year_discontinued: u16,
-    pub phase: u8,
+    pub year_discontinued: i16,
+    pub phase: i8,
     pub discontinuation_reason: String,
     pub link: String,
     pub repurposed_efforts: Vec<String>,
-    pub repurposed_drug_name: String,
+    pub repurposed_drug_name: Option<String>,
     pub repurposed_indications: Vec<String>,
-    pub repurposed_year: Option<u32>,
+    pub repurposed_year: Option<i16>,
     pub repurposed_company: Option<String>,
-    pub repurposed_phase: Option<u8>,
+    pub repurposed_phase: Option<i16>,
 }
