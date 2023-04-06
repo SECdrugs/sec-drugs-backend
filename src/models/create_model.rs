@@ -27,7 +27,7 @@ pub struct CreateModel {
     pub phase: i8,
     pub discontinuation_reason: String,
     pub link: String,
-    pub repurposed_efforts: Vec<String>,
+    pub repurposed_efforts: Option<String>,
     pub repurposed_drug_name: Option<String>,
     pub repurposed_indications: Vec<String>,
     pub repurposed_year: Option<i16>,

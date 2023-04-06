@@ -1,104 +1,47 @@
-[
-  {
-    "names": ["AMG529"],
-    "company": "Amgen",
-    "genes": ["ASGR1"],
-    "clinical_annotation": [],
-    "pathway_annotation": [],
-    "diseases": ["Cardiovascular Disease"],
-    "targets": [
-      {
-        "names": ["asialoglycoprotein receptor 1"]
-      }
-    ],
-    "mechanism_of_action": ["asialoglycoprotein receptor 1 inhibitor"],
-    "indications": ["Cardiovascular Disease"],
-    "indication_type": "Cardiovascular",
-    "year_discontinued": 2019,
-    "phase": 1,
-    "discontinuation_reason": "commercialization related",
-    "link": "https://www.evaluate.com/vantage/articles/events/conferences/jp-morgan-2019-day-two-roundup-after-party-harsh-reality",
-    "repurposed_efforts": [],
-    "repurposed_drug_name": null,
-    "repurposed_indications": [],
-    "repurposed_year": null,
-    "repurposed_company": null,
-    "repurposed_phase": null
-  },
-  {
-    "names": ["LY3463251"],
-    "company": "Eli Lilly",
-    "genes": ["GDF15"],
-    "clinical_annotation": [],
-    "pathway_annotation": [],
-    "diseases": ["Type 2 Diabetes", "Obesity"],
-    "targets": [
-      {
-        "names": ["growth differentiation factor 15"]
-      }
-    ],
-    "mechanism_of_action": ["growth differentiation factor 15 agonist"],
-    "indications": ["Type 2 Diabetes/Obesity"],
-    "indication_type": "Metabolic",
-    "year_discontinued": 2020,
-    "phase": 1,
-    "discontinuation_reason": null,
-    "link": "https://investor.lilly.com/static-files/e84b2d25-8e5b-4041-b7f0-8a1749fb9f77",
-    "repurposed_efforts": [],
-    "repurposed_drug_name": null,
-    "repurposed_indications": [],
-    "repurposed_year": null,
-    "repurposed_company": null,
-    "repurposed_phase": null
-  },
-  {
-    "names": ["LY3325656"],
-    "company": "Eli Lilly",
-    "genes": ["GPR142"],
-    "clinical_annotation": [],
-    "pathway_annotation": [],
-    "targets": [
-      {
-        "names": ["G protein-coupled receptor 142"]
-      }
-    ],
-    "mechanism_of_action": ["G protein-coupled receptor 142 agonist"],
-    "indications": ["Type 2 Diabetes"],
-    "indication_type": "Metabolic",
-    "year_discontinued": 2018,
-    "phase": 1,
-    "discontinuation_reason": null,
-    "link": "https://investor.lilly.com/static-files/3556875d-ae48-4911-99ba-05647b225ed5",
-    "repurposed_efforts": ["Diabetic retinopathy", "Pain"],
-    "repurposed_drug_name": null,
-    "repurposed_indications": [],
-    "repurposed_year": null,
-    "repurposed_company": null,
-    "repurposed_phase": null
-  },
-  {
-    "names": ["KBP-089", "DACRA-089"],
-    "company": "Eli Lilly",
-    "genes": ["IAPP/CALCR"],
-    "clinical_annotation": ["rocuronium dosage"],
-    "pathway_annotation": [],
-    "targets": [
-      {
-        "names": ["amylin/calcitonin receptor"]
-      }
-    ],
-    "mechanism_of_action": ["amylin", "calcitonin receptor dual agonist"],
-    "indications": ["Type 2 Diabetes"],
-    "indication_type": "Metabolic",
-    "year_discontinued": null,
-    "phase": 1,
-    "discontinuation_reason": null,
-    "link": "https://investor.lilly.com/static-files/68230d7a-ba20-43dc-979b-fea529a5e6c4",
-    "repurposed_efforts": [],
-    "repurposed_drug_name": null,
-    "repurposed_indications": [],
-    "repurposed_year": null,
-    "repurposed_company": null,
-    "repurposed_phase": null
-  }
-]
+{
+  "names": ["TAK-591"],
+  "company": "Takeda",
+  "genes": ["AGTR"],
+  "clinical_annotation": [
+    "AGTR1: Thiazides, Ace Inhibitors toxicity; losartan, Ace Inhibitors, candesartan, perindopril, captopril, angiotensin II, irbesartan, nitrendipine efficacy; atorvastatin metabolism",
+    "AGTR2: ACE Inhibitor Pathway, Renin-angiotensin-aldosterone system"
+  ],
+  "pathway_annotation": [
+    "AGTR1: ACE Inhibitor Pathway, Renin-angiotensin-aldosterone system, Losartan Pathway",
+    "AGTR2: ACE Inhibitor Pathway, Renin-angiotensin-aldosterone system"
+  ],
+  "diseases": [
+    "AGTR1: Left ventricular hypertrophy",
+    "Ischemia",
+    "Liver cirrhosis",
+    "Essential hypertension",
+    "Covid-19",
+    "Heart failure",
+    "Myocardial infarction",
+    "Diabetes mellitus",
+    "Type 2 diabetes mellitus",
+    "Coronary artery disease",
+    "Hypertension"
+  ],
+  "targets": [
+    {
+      "names": ["Angiotensin receptor"]
+    }
+  ],
+  "mechanism_of_action": ["Angiotensin receptor antagonists"],
+  "indications": ["Hypertension"],
+  "indication_type": "Cardiovascular",
+  "phase": 1,
+  "year_discontinued": 2011,
+  "discontinuation_reason": "TAK-536 was launched/ no need to keep TAK-591",
+  "link": "https://www.takeda.com/4ab325/siteassets/system/investors/quarterly-announcements/fy2012/qr2012_full_d_en.pdf",
+  "repurposed_efforts": [
+    "Idiopathic Intracranial Hypertension",
+    "Iatrogenic Cushing's Disease"
+  ],
+  "repurposed_drug_name": "AZD4017",
+  "repurposed_indications": ["Iatrogenic Cushing's Disease"],
+  "repurposed_year": 2016,
+  "repurposed_company": "AstraZeneca",
+  "repurposed_phase": 2
+}
