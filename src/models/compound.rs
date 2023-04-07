@@ -1,4 +1,6 @@
-#[derive(Serialize)]
+use serde::{Deserialize, Serialize};
+
+#[derive(Clone, Serialize, Deserialize)]
 pub struct Compound {
     id: String,
     discontinuation_phase: u8,

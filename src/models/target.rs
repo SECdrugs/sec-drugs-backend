@@ -1,10 +1,9 @@
 use serde::{Deserialize, Serialize};
 
 #[derive(Clone, Serialize, Deserialize)]
-pub struct CompoundName {
+pub struct Target {
     id: String,
-    name: String,
-    is_repurposed: bool,
+    names: Vec<String>,
     created_at: String,
     updated_at: String,
 }

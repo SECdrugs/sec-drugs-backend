@@ -1,3 +1,6 @@
+use serde::{Deserialize, Serialize};
+
+#[derive(Clone, Serialize, Deserialize)]
 pub struct Repurposing {
     id: String,
     compound_id: String,
@@ -6,4 +9,5 @@ pub struct Repurposing {
     year: u16,
     created_at: String,
     updated_at: String,
+    efforts: String,
 }
