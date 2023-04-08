@@ -1,4 +1,5 @@
 use actix_web::{http::header::ContentType, post, web, HttpResponse, Responder};
+use serde_json::{Map, Value};
 use sqlx::PgPool;
 
 use crate::{
@@ -201,7 +202,11 @@ async fn create(
             .unwrap();
     }
 
+    let id_value = Value::String(compound_id.to_string());
+    let mut response = Map::new();
+    response.insert("id".to_string(), id_value);
+
     HttpResponse::Ok()
         .content_type(ContentType::json())
-        .body(indication_ids.len().to_string())
+        .json(response)
 }
