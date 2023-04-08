@@ -14,5 +14,5 @@ pub async fn get_compound(
 
     let compound = get_compound_by_id(pool, compound_id).await.unwrap();
 
-    Ok(HttpResponse::Ok().finish())
+    Ok(HttpResponse::Ok().json(compound))
 }

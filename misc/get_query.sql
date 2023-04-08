@@ -10,7 +10,7 @@ with compound_info as (
     company.id as company_id
   from compound c
     inner join company on company.id = c.discontinuation_company_id
-  where c.id = '4fbfa2c2-6946-4750-93c1-19b327538d4c'
+  where c.id = $1
 ),
 mechanisms_of_action as (
   select json_agg(mechanism) as mechanisms_of_action
