@@ -1,9 +1,8 @@
 use serde::{Deserialize, Serialize};
+use sqlx::FromRow;
 
-#[derive(Clone, Serialize, Deserialize)]
+#[derive(Clone, Serialize, Deserialize, FromRow)]
 pub struct GeneTarget {
     id: String,
     gene: String,
-    created_at: String,
-    updated_at: String,
 }

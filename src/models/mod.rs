@@ -1,1 +1,12 @@
+pub mod annotation;
+pub mod company;
+pub mod compound;
+pub mod compound_name;
 pub mod create_model;
+pub mod disease;
+pub mod gene_target;
+pub mod get_compound;
+pub mod indication;
+pub mod mechanism_of_actions;
+pub mod repurposing;
+pub mod target;

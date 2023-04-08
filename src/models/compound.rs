@@ -1,12 +1,15 @@
-use serde::{Deserialize, Serialize};
+use sqlx::{
+    types::{chrono::NaiveDateTime, Uuid},
+    FromRow,
+};
 
-#[derive(Clone, Serialize, Deserialize)]
+#[derive(Clone, FromRow)]
 pub struct Compound {
-    id: String,
-    discontinuation_phase: u8,
-    discontinuation_reason: u16,
-    discontinuation_company_id: String,
+    id: Uuid,
+    discontinuation_phase: i32,
+    discontinuation_reason: String,
+    discontinuation_company_id: Uuid,
     link: String,
-    created_at: String,
-    updated_at: String,
+    created_at: NaiveDateTime,
+    updated_at: NaiveDateTime,
 }

@@ -18,3 +18,4 @@ To run, enter `cargo run`. For live reloading, try `cargo watch -x run`.
 ## TODOs
 - [ ] Read database connection string from .env
 - [ ] Require an API key to use `/create` endpoint
+- [ ] Important: Put entire create logic in one SQL query and wrap it in a transaction

@@ -1,6 +1,6 @@
 use sqlx::{types::Uuid, Error, PgPool};
 
-use crate::models::create_model::{CreateModel, Target};
+use crate::models::create_model::{CreateModel, CreateTarget};
 
 /** Insert new compound (including company) in DB */
 pub async fn add_compound(pool: &PgPool, model: CreateModel) -> Result<Uuid, Error> {
@@ -134,7 +134,10 @@ pub async fn add_or_fetch_input_vec(
 }
 
 /** Retrieve or insert each target. */
-pub async fn add_or_fetch_targets(pool: &PgPool, targets: Vec<Target>) -> Result<Vec<Uuid>, Error> {
+pub async fn add_or_fetch_targets(
+    pool: &PgPool,
+    targets: Vec<CreateTarget>,
+) -> Result<Vec<Uuid>, Error> {
     let search_query = "select id from target where array_to_string(names, ', ') ilike '%$1%'";
     let insert_query = "insert into target (names) values ($1::varchar[]) returning id new_id;";
     let mut target_ids: Vec<Uuid> = vec![];

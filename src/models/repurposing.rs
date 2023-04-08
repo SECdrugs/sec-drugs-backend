@@ -1,13 +1,12 @@
-use serde::{Deserialize, Serialize};
+use sqlx::{types::Uuid, FromRow};
 
-#[derive(Clone, Serialize, Deserialize)]
+#[derive(Clone, FromRow)]
 pub struct Repurposing {
-    id: String,
-    compound_id: String,
-    compound_name_id: String,
-    company_id: String,
-    year: u16,
-    created_at: String,
-    updated_at: String,
+    id: Uuid,
+    compound_id: Uuid,
+    compound_name_id: Uuid,
+    company_id: Uuid,
+    year: i32,
+    phase: i32,
     efforts: String,
 }

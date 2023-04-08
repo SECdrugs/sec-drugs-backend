@@ -53,10 +53,10 @@ async fn create(
     for compound_name_id in compound_name_ids {
         create_join(
             pool,
-            "compound_name",
             "compound",
-            compound_name_id,
+            "compound_name",
             compound_id,
+            compound_name_id,
         )
         .await
         .unwrap();

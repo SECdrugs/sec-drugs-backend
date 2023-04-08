@@ -1,12 +1,10 @@
 use serde::{Deserialize, Serialize};
+use sqlx::FromRow;
 
-#[derive(Clone, Serialize, Deserialize)]
+#[derive(Clone, Serialize, Deserialize, FromRow)]
 pub struct Indication {
     id: String,
-    indication_type_id: String,
     indication: String,
-    created_at: String,
-    updated_at: String,
     #[serde(alias = "type")]
     indication_type: String,
 }
