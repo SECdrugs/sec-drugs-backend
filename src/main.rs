@@ -1,3 +1,4 @@
+use actix_cors::Cors;
 use actix_web::{
     get, http::header::ContentType, middleware::Logger, web::Data, App, HttpResponse, HttpServer,
     Responder,
@@ -29,10 +30,12 @@ async fn main() -> std::io::Result<()> {
 
     HttpServer::new(move || {
         let logger = Logger::default();
+        let cors = Cors::default().allow_any_origin().send_wildcard();
 
         App::new()
             .app_data(Data::new(pool.clone()))
             .wrap(logger)
+            .wrap(cors)
             .service(index)
             .service(create)
             .service(get_compound)

@@ -18,20 +18,6 @@ pub async fn search_all(pool: &PgPool, term: &str) -> Result<serde_json::Value, 
         FROM company
         WHERE name ILIKE '%' || ($1) || '%'
       ),
-      'compounds',
-      (
-        SELECT json_agg(
-            json_build_object('id', id, 'matched_field_value', discontinuation_reason)
-          )
-        FROM compound
-        WHERE discontinuation_reason ILIKE '%' || ($1) || '%'
-      ),
-      'compound_links',
-      (
-        SELECT json_agg(json_build_object('id', id, 'matched_field_value', link))
-        FROM compound
-        WHERE link ILIKE '%' || ($1) || '%'
-      ),
       'compound_names',
       (
         SELECT json_agg(json_build_object('id', id, 'matched_field_value', name))
