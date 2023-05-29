@@ -4,7 +4,7 @@ use actix_web::{
 };
 mod controllers;
 mod models;
-use controllers::{compound::get_compound, create::create};
+use controllers::{compound::get_compound, create::create, search::search};
 use sqlx::postgres::PgPoolOptions;
 
 #[get("/")]
@@ -36,6 +36,7 @@ async fn main() -> std::io::Result<()> {
             .service(index)
             .service(create)
             .service(get_compound)
+            .service(search)
     })
     .bind(("127.0.0.1", 8000))?
     .run()
