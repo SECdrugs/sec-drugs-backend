@@ -18,11 +18,13 @@ pub async fn search_all(pool: &PgPool, term: &str) -> Result<serde_json::Value, 
         FROM company
         WHERE name ILIKE '%' || ($1) || '%'
       ),
-      'compound_names',
+      'compounds',
       (
-        SELECT json_agg(json_build_object('id', id, 'matched_field_value', name))
-        FROM compound_name
-        WHERE name ILIKE '%' || ($1) || '%'
+        SELECT json_agg(json_build_object('id', c.id, 'matched_field_value', name))
+        FROM compound_name cn
+        inner join compound_compound_name ccn on ccn.compound_name_id = cn.id
+        inner join compound c on c.id = ccn.compound_id
+        WHERE cn.name ILIKE '%' || ($1) || '%' 
       ),
       'diseases',
       (

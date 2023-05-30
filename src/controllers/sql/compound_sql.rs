@@ -14,7 +14,7 @@ pub async fn get_compound_by_id(
           c.link,
           c.created_at,
           c.updated_at,
-          company.name,
+          company.name as company,
           company.id as company_id
         from compound c
           inner join company on company.id = c.discontinuation_company_id
@@ -96,7 +96,7 @@ pub async fn get_compound_by_id(
       repurposing as (
         select r.id as repurposing_id,
           compound_name.name as name,
-          c.name as company,
+          c.name as repurposing_company,
           r.year as repurposing_year,
           r.phase as repurposing_phase,
           r.efforts as repurposing_efforts,
